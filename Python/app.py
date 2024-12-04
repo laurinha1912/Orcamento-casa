@@ -12,23 +12,23 @@ if "custos" not in st.session_state:
 for categoria in categorias:
     with st.expander(f"Categoria: {categoria}"):       
         if categoria == "Fundação":
-            st.image("fotos/Fundacao.jpeg", caption="Fundação exemplo", use_container_width=True)
+            st.image("https://www.mapadaobra.com.br/wp-content/uploads/2016/10/Novo_Layout-3.jpg", caption="Fundação exemplo", use_container_width=True)
             item = st.selectbox("Escolha o material:", ["Blocos de concreto", "Areia", "Cimento", "Brita", "Ferro"], key=f"item_{categoria}")
         elif categoria == "Estrutura":
-            st.image("fotos/Estrutura.jpeg", caption="Estrutura exemplo", use_container_width=True)
+            st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdUgPrs2-0D6wAvW5IUVbx_uARt_XUTXQyTQ&s", caption="Estrutura exemplo", use_container_width=True)
             item = st.selectbox("Escolha o material:", ["Tijolos", "Blocos Cerâmicos", "Cimento", "Aço", "Madeira"], key=f"item_{categoria}")
         elif categoria == "Cobertura":
-            st.image("fotos/Cobertura.jpeg", caption="Cobertura exemplo", use_container_width=True)
+            st.image("https://casadoconstrutor.com.br/sites/default/files/styles/blog_extra_grande_816x304/public/2024-11/fase-da-obra-cobertura-tudo-que-voce-precisa-saber.jpg.webp?itok=HzixqY5h", caption="Cobertura exemplo", use_container_width=True)
             item = st.selectbox("Escolha o material:", ["Telhas", "Estrutura"], key=f"item_{categoria}")
             if item == "Telhas":
                 item += f" ({st.selectbox('Tipo de Telha:', ['Cerâmica', 'Metálica'], key=f'tipo_{categoria}')})"
             else:
                 item += f" ({st.selectbox('Tipo de Estrutura:', ['Madeira', 'Metálica'], key=f'tipo_{categoria}')})"
         elif categoria == "Revestimentos":
-            st.image("fotos/Revestimento.jpeg", caption="Revestimento exemplo", use_container_width=True)
+            st.image("https://reformweb.com.br/img/reboco_04.jpg", caption="Revestimento exemplo", use_container_width=True)
             item = st.selectbox("Escolha o material:", ["Piso", "Pintura"], key=f"item_{categoria}")
         elif categoria == "Enquadrias":
-            st.image("fotos/Enquadria.jpeg", caption="Enquadria exemplo", use_container_width=True)
+            st.image("https://www.tudoconstrucao.com/wp-content/uploads/2020/01/35cef589cc8d9fa8818db5fe79ce6831.jpg", caption="Enquadria exemplo", use_container_width=True)
             item = st.selectbox("Escolha o material:", ["Portas", "Janelas"], key=f"item_{categoria}")
 
         
